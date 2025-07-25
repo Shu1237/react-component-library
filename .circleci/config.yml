@@ -8,8 +8,12 @@ jobs:
     executor: node/default
     steps:
       - checkout
-      - node/install-packages:
-          pkg-manager: npm
+      - run:
+          name: Install dependencies
+          command: npm ci --no-optional
+      - run:
+          name: Install Rollup separately
+          command: npm install rollup --no-save
       - run:
           name: Run lint check
           command: npm run lint

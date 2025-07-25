@@ -10,6 +10,9 @@
     "type": "git",
     "url": "https://github.com/Shu1237/react-component-library.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "author": "Shu",
   "main": "dist/cjs/index.js",

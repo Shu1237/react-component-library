@@ -1,14 +1,14 @@
 {
-  "name": "react-library",
+  "name": "@shu1237/react-components",
   "version": "1.0.0",
-  "description": "this is a react component library",
-  "homepage": "https://github.com/Shu1237/react-component-libary#readme",
+  "description": "A reusable React component library",
+  "homepage": "https://github.com/Shu1237/react-component-library#readme",
   "bugs": {
-    "url": "https://github.com/Shu1237/react-component-libary/issues"
+    "url": "https://github.com/Shu1237/react-component-library/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Shu1237/react-component-libary.git"
+    "url": "https://github.com/Shu1237/react-component-library.git"
   },
   "license": "MIT",
   "author": "Shu",

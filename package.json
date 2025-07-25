@@ -22,8 +22,13 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "test": "jest --verbose",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "tsc --noEmit",
+    "lint:fix": "tsc --noEmit",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.6",

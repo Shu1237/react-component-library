@@ -28,7 +28,7 @@
     "lint:fix": "tsc --noEmit",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepare": "husky"
+    "prepare": "is-ci || husky"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.6",
@@ -44,6 +44,8 @@
     "@testing-library/react": "^16.3.0",
     "@types/jest": "^30.0.0",
     "@types/react": "^19.1.8",
+    "husky": "^9.1.7",
+    "is-ci": "^4.1.0",
     "jest": "^30.0.5",
     "jest-environment-jsdom": "^30.0.5",
     "react": "^19.1.0",

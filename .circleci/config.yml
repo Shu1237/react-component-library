@@ -43,11 +43,19 @@ jobs:
   publish:
     executor: node/default
     steps:
-      - attach_workspace:
-          at: ~/project
+      - checkout
+      - run:
+          name: Install dependencies
+          command: npm ci --no-optional
+      - run:
+          name: Install Rollup separately
+          command: npm install rollup --no-save
+      - run:
+          name: Build library
+          command: npm run build
       - run:
           name: Authenticate with registry
-          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/project/.npmrc
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
       - run:
           name: Publish package
           command: npm publish
@@ -58,21 +66,21 @@ workflows:
     jobs:
       - build-and-test:
           filters:
+            branches:
+              only: master
             tags:
-              only: /.*/
+              ignore: /.*/
       - build-storybook:
           requires:
             - build-and-test
           filters:
+            branches:
+              only: master
             tags:
-              only: /.*/
+              ignore: /.*/
       - publish:
-          requires:
-            - build-and-test
           filters:
             branches:
               ignore: /.*/
             tags:
               only: /^v.*/
-  
-  

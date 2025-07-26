@@ -9,3 +9,12 @@ export { Button as Button2, buttonVariants } from "./components/Button2";
 export { Calendar, CalendarDayButton } from "./components/Calendar";
 
 export { Avatar, AvatarFallback, AvatarImage } from "./components/Avatar";
+export {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+  BreadcrumbEllipsis,
+} from "./components/BreadCrumb";

@@ -24,6 +24,13 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
     --radius: 0.5rem;
+
+    /* Chart color variables */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
   }
 
   .dark {
@@ -46,6 +53,13 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+
+    /* Chart color variables for dark mode */
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
   }
 }
 
@@ -68,6 +82,87 @@
   /* Calendar range selection improvements */
   .calendar-root [data-range-middle="true"] + [data-range-middle="true"] {
     @apply border-l-0;
+  }
+
+  /* Chart specific improvements */
+  [data-slot="chart"] {
+    @apply w-full;
+  }
+
+  /* Chart container styling */
+  .recharts-responsive-container {
+    @apply min-h-0;
+  }
+
+  /* Chart tooltip styling */
+  .recharts-tooltip-wrapper {
+    @apply z-50;
+  }
+
+  .recharts-tooltip-cursor {
+    @apply fill-muted/10;
+  }
+
+  /* Chart legend styling */
+  .recharts-legend-wrapper {
+    @apply mt-4;
+  }
+
+  /* Chart grid styling */
+  .recharts-cartesian-grid-horizontal line,
+  .recharts-cartesian-grid-vertical line {
+    @apply stroke-border/30;
+  }
+
+  /* Chart axis styling */
+  .recharts-xAxis .recharts-cartesian-axis-tick-value,
+  .recharts-yAxis .recharts-cartesian-axis-tick-value {
+    @apply fill-muted-foreground text-xs;
+  }
+
+  /* Chart bar styling */
+  .recharts-bar-rectangle {
+    @apply transition-all duration-200;
+  }
+
+  .recharts-bar-rectangle:hover {
+    @apply opacity-80;
+  }
+
+  /* Chart line styling */
+  .recharts-line-curve {
+    @apply transition-all duration-200;
+  }
+
+  .recharts-line-dot {
+    @apply transition-all duration-200;
+  }
+
+  .recharts-line-dot:hover {
+    @apply scale-110;
+  }
+
+  /* Chart area styling */
+  .recharts-area-curve {
+    @apply transition-all duration-200;
+  }
+
+  /* Pie chart styling */
+  .recharts-pie-sector {
+    @apply transition-all duration-200;
+  }
+
+  .recharts-pie-sector:hover {
+    @apply opacity-90 scale-105 origin-center;
+  }
+
+  /* Radial bar chart styling */
+  .recharts-radial-bar-sector {
+    @apply transition-all duration-200;
+  }
+
+  .recharts-radial-bar-sector:hover {
+    @apply opacity-90;
   }
 }
 

@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
+    // Base directory to resolve non-relative module names
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    //-----------------------------
     /* Language and Environment */
     "target": "esnext" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
     "jsx": "react-jsx" /* Specify what JSX code is generated. */,
@@ -34,11 +40,6 @@
     /* Completeness */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }

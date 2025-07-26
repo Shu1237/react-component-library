@@ -49,6 +49,28 @@
   }
 }
 
+@layer components {
+  /* Calendar specific improvements */
+  .calendar-root {
+    @apply min-w-fit;
+  }
+
+  /* Ensure proper table spacing */
+  .calendar-root table {
+    border-spacing: 2px;
+  }
+
+  /* Calendar animation improvements */
+  .calendar-root [data-slot="button"] {
+    @apply transition-all duration-200 ease-in-out;
+  }
+
+  /* Calendar range selection improvements */
+  .calendar-root [data-range-middle="true"] + [data-range-middle="true"] {
+    @apply border-l-0;
+  }
+}
+
 @layer base {
   * {
     @apply border-border;

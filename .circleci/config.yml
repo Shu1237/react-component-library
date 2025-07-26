@@ -62,7 +62,7 @@ jobs:
 
 workflows:
   version: 2
-  build-test-deploy:
+  main-workflow:
     jobs:
       - build-and-test:
           filters:
@@ -83,4 +83,4 @@ workflows:
             branches:
               ignore: /.*/
             tags:
-              only: /^v.*/
+               only: /^v.*/

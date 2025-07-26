@@ -27,3 +27,12 @@ export {
   CarouselPrevious,
   CarouselNext,
 } from "./components/Carousel";
+
+export {
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+  ChartLegend,
+  ChartLegendContent,
+  ChartStyle,
+} from "./components/Chart";

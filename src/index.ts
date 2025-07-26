@@ -7,3 +7,5 @@ export { default as Badge } from "./components/Badge";
 //export shadcn components
 export { Button as Button2, buttonVariants } from "./components/Button2";
 export { Calendar, CalendarDayButton } from "./components/Calendar";
+
+export { Avatar, AvatarFallback, AvatarImage } from "./components/Avatar";

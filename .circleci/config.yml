@@ -73,12 +73,17 @@ workflows:
       - build-storybook:
           requires:
             - build-and-test
+          when: on_success
           filters:
             branches:
               only: master
             tags:
               ignore: /.*/
       - publish:
+          requires:
+            - build-and-test,
+            - build-storybook
+          when: on_success
           filters:
             branches:
               only: master

@@ -4,5 +4,6 @@ export { default as Card } from './components/Card';
 export { default as Input } from './components/Input';
 export { default as Toast } from './components/Toast';
 export { default as Badge } from './components/Badge';
+export { default as Textarea } from './components/Textarea';
 
 

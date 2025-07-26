@@ -81,7 +81,7 @@ workflows:
               ignore: /.*/
       - publish:
           requires:
-            - build-and-test,
+            - build-and-test
             - build-storybook
           when: on_success
           filters:

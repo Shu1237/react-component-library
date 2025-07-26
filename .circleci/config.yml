@@ -10,7 +10,7 @@ jobs:
       - checkout
       - run:
           name: Install dependencies
-          command: npm ci --no-optional
+          command: npm ci --no-optional --legacy-peer-deps
       - run:
           name: Install Rollup separately
           command: npm install rollup --no-save
@@ -83,4 +83,4 @@ workflows:
             branches:
               only: master
             tags:
-               only: /^v.*/
+              only: /^v.*/

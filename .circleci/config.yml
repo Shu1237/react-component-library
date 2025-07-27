@@ -69,7 +69,7 @@ workflows:
             branches:
               only: master
             tags:
-              only: /^v.*/
+              ignore: /.*/
       - build-storybook:
           requires:
             - build-and-test
@@ -77,13 +77,13 @@ workflows:
             branches:
               only: master
             tags:
-              only: /^v.*/
+              ignore: /.*/
       - publish:
           requires:
             - build-and-test
             - build-storybook
           filters:
             branches:
-              only: master
+              ignore: /.*/
             tags:
-              only: /^v.*/
+               only: /^v.*/

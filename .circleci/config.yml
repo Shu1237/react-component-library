@@ -61,7 +61,7 @@ jobs:
           command: npm publish
 
 workflows:
-  version: 2
+  version: 2.1
   main-workflow:
     jobs:
       - build-and-test:

@@ -62,7 +62,7 @@ jobs:
 
 workflows:
   version: 2.1
-  main-workflow:
+  build-and-storybook:
     jobs:
       - build-and-test:
           filters:
@@ -78,10 +78,12 @@ workflows:
               only: master
             tags:
               ignore: /.*/
+  publish-on-tag:
+    jobs:
       - publish:
           filters:
             branches:
-              only: master
+              ignore: /.*/
             tags:
-               only: /^v.*/
+              only: /^v.*/
 

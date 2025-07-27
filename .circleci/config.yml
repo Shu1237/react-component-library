@@ -79,9 +79,6 @@ workflows:
             tags:
               ignore: /.*/
       - publish:
-          requires:
-            - build-and-test
-            - build-storybook
           filters:
             branches:
               only: master

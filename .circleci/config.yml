@@ -84,6 +84,6 @@ workflows:
             - build-storybook
           filters:
             branches:
-              ignore: /.*/
+              only: master
             tags:
-               only: /^v.*/
+              only: /^v.*/

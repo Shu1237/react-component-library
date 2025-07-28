@@ -8,42 +8,48 @@ const meta: Meta<typeof Toast> = {
     layout: 'centered',
     docs: {
       description: {
-        component: 'Toast notifications for success, error, warning, and info messages.'
+        component: 'A Toast component used to show brief feedback messages like success, error, warning, or info.'
       }
     }
   },
   tags: ['autodocs'],
   argTypes: {
     variant: {
-      control: 'select',
+      description: 'Type of the toast message',
+      control: { type: 'select' },
       options: ['success', 'error', 'warning', 'info'],
-      description: 'Toast variant'
+      defaultValue: 'info'
     },
     title: {
-      control: 'text',
-      description: 'Toast title'
-    },
-    autoClose: {
-      control: 'boolean',
-      description: 'Auto close after delay'
-    },
-    autoCloseDelay: {
-      control: 'number',
-      description: 'Auto close delay in milliseconds'
-    },
-    showCloseButton: {
-      control: 'boolean',
-      description: 'Show close button'
+      description: 'Title displayed at the top of the toast',
+      control: 'text'
     },
     children: {
-      control: 'text',
-      description: 'Toast content'
+      description: 'Main content of the toast',
+      control: 'text'
+    },
+    autoClose: {
+      description: 'Auto dismiss the toast after a delay',
+      control: 'boolean',
+      defaultValue: true
+    },
+    autoCloseDelay: {
+      description: 'Time in ms before auto dismiss',
+      control: 'number',
+      defaultValue: 3000
+    },
+    showCloseButton: {
+      description: 'Show close (X) button',
+      control: 'boolean',
+      defaultValue: true
     }
   }
 };
 
 export default meta;
 type Story = StoryObj<typeof Toast>;
+
+// --- Individual Stories ---
 
 export const Success: Story = {
   args: {
@@ -80,17 +86,8 @@ export const Info: Story = {
 export const WithoutTitle: Story = {
   args: {
     variant: 'success',
-    children: 'Toast without title'
+    children: 'This toast has no title.'
   }
 };
 
-export const AllVariants: Story = {
-  render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', width: '400px' }}>
-      <Toast variant="success" title="Success">Operation completed successfully!</Toast>
-      <Toast variant="error" title="Error">Something went wrong!</Toast>
-      <Toast variant="warning" title="Warning">Please be careful!</Toast>
-      <Toast variant="info" title="Info">Just so you know...</Toast>
-    </div>
-  )
-};
+

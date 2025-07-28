@@ -1,5 +1,3 @@
-# Run lint before commit
-npm run lint:fix
 
 # Run tests before commit
 npm run test

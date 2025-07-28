@@ -1,6 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
-
-import { fn } from 'storybook/test';
+import type { Meta, StoryObj } from '@storybook/react';
 
 import { Header } from './Header';
 
@@ -14,9 +12,9 @@ const meta = {
     layout: 'fullscreen',
   },
   args: {
-    onLogin: fn(),
-    onLogout: fn(),
-    onCreateAccount: fn(),
+    onLogin: () => {},
+    onLogout: () => {},
+    onCreateAccount: () => {},
   },
 } satisfies Meta<typeof Header>;
 

@@ -12,4 +12,5 @@ export interface ToastProps {
   autoCloseDelay?: number;
   showCloseButton?: boolean;
   className?: string;
+  position?: ToastPosition;
 }

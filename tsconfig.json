@@ -5,6 +5,7 @@
     "paths": {
       "@/*": ["./src/*"]
     },
+    
     //-----------------------------
     /* Language and Environment */
     "target": "esnext" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
@@ -17,7 +18,7 @@
     /* JavaScript Support */
     "allowJs": false /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */,
     "maxNodeModuleJsDepth": 1 /* Specify the maximum folder depth used for checking JavaScript files from 'node_modules'. Only applicable with 'allowJs'. */,
-
+  
     /* Emit */
     "declaration": false /* Generate .d.ts files from TypeScript and JavaScript files in your project. */,
     "sourceMap": true /* Create source map files for emitted JavaScript files. */,
@@ -27,7 +28,7 @@
     "allowSyntheticDefaultImports": true /* Allow 'import x from y' when a module doesn't have a default export. */,
     "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */,
     "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
-
+  
     /* Type Checking */
     "strict": true /* Enable all strict type-checking options. */,
     "noUnusedLocals": true /* Enable error reporting when local variables aren't read. */,
